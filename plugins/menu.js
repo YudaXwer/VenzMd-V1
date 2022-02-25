@@ -156,11 +156,6 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            hydratedFooterText: wm,
            hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Instagram',
-                                    url: 'https://instagram.com/riyoshi_dyxn'
-                                }
-                            }, {
-                                urlButton: {
                                     displayText: 'Group',
                                     url: 'https://chat.whatsapp.com/FmhTMtBbANVEprMNlJPTov'
                                 }
@@ -170,7 +165,6 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                displayText: 'OWNER',
                id: '.owner',
              }
-
            },
                {
              quickReplyButton: {
