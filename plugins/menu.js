@@ -157,29 +157,33 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '💠 Source Code',
-               url: 'https://github.com/adiwajshing/Baileys'
-             }
-
-           },
+                                    displayText: 'Instagram',
+                                    url: 'https://instagram.com/riyoshi_dyxn'
+                                }
+                            }, {
+                                urlButton: {
+                                    displayText: 'Group',
+                                    url: 'https://chat.whatsapp.com/FmhTMtBbANVEprMNlJPTov'
+                                }
+                            },
              {
              quickReplyButton: {
-               displayText: '🧒 Owner',
+               displayText: 'OWNER',
                id: '.owner',
              }
 
            },
                {
              quickReplyButton: {
-               displayText: '💲 Donasi',
+               displayText: 'SEWA',
                id: '.donasi',
              }
 
            },
            {
              quickReplyButton: {
-               displayText: '📍 Credits',
-               id: '.tqto',
+               displayText: 'STATUS',
+               id: '.ping',
              }
            }]
          }
