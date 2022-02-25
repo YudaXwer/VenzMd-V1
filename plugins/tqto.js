@@ -26,10 +26,8 @@ let tqto = `
            jpegThumbnail: fs.readFileSync('./media/tqto.jpg') }, 
            hydratedFooterText: wm,
            hydratedButtons: [{
-             urlButton: {
-
+                                urlButton: {
                                     displayText: 'Instagram',
-
                                     url: 'https://instagram.com/riyoshi_dyxn'
                                 }
                             }, {
