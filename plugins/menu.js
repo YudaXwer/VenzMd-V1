@@ -171,7 +171,6 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                displayText: 'SEWA',
                id: '.donasi',
              }
-
            },
            {
              quickReplyButton: {
