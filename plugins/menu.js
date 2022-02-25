@@ -45,8 +45,7 @@ const defaultMenu = {
   header: '━━━⬣ %category',
   body: '🔖 %cmd %islimit %isPremium',
   footer: '\n',
-  after: `
-`,
+  after: ``,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
@@ -156,7 +155,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            jpegThumbnail: fs.readFileSync('./media/shiraori.jpg') },
            hydratedFooterText: wm,
            hydratedButtons: [{
-             urlButton: {
+                                urlButton: {
                                     displayText: 'Instagram',
                                     url: 'https://instagram.com/riyoshi_dyxn'
                                 }
