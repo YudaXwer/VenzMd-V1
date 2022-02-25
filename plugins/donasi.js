@@ -7,9 +7,8 @@ const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessa
 let handler = async (m) => {
 let duit = `*────── 「 SEWA 」 ──────*
 
-Hai 👋
+ 👋 Hai kak
 Ingin Sewa Bot ?
-
 ┌〔 LIST HARGA 〕
 ├♪ 10K (1 Bulan)
 ├♪ 15K (2 Bulan)
@@ -18,22 +17,19 @@ Ingin Sewa Bot ?
 ├♪ SEWA + PREMIUM (+5K)
 └────
 
-
-
-
 Chat Owner Untuk Order :
 wa.me/6285664770042 (Owner)`
-let message = await prepareWAMessageMedia({ image: {url: 'https://i.postimg.cc/KYL0g2K7/bank.jpg' }}, { upload: conn.waUploadToServer })
+let message = await //prepareWAMessageMedia({ image: {url: 'https://i.postimg.cc/KYL0g2K7/bank.jpg' }}, { upload: conn.waUploadToServer })
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
-           imageMessage: message.imageMessage,
+           imageMessage: fs.readFileSync('./media/shiraori.jpg'),
            hydratedContentText: duit,
            hydratedFooterText: wm,
            hydratedButtons: [
               {
              quickReplyButton: {
-               displayText: 'Owner',
+               displayText: 'OWNER',
                id: '.owner',
              }
 
