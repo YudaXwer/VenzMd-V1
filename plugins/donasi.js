@@ -5,19 +5,24 @@
 
 const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, downloadContentFromMessage, downloadHistory, proto, getMessage, generateWAMessageContent, prepareWAMessageMedia } = require('@danielteodoro/baileys-md')
 let handler = async (m) => {
-let duit = `*────── 「 DONATE 」 ──────*
+let duit = `*────── 「 SEWA 」 ──────*
 
 Hai 👋
-Kalian bisa mendukung saya agar bot ini tetap up to date dengan:
-┌〔 Donasi • Emoney 〕
-├🏧 0813-6897-1807 (OVO/Dana/GoPay)
+Ingin Sewa Bot ?
+
+┌〔 LIST HARGA 〕
+├♪ 10K (1 Bulan)
+├♪ 15K (2 Bulan)
+├♪ 20K (3 Bulan)
+├♪ 30K (6 Bulan)
+├♪ SEWA + PREMIUM (+5K)
 └────
-Berapapun donasi kalian akan sangat berarti 👍
 
-Arigatou!
 
-Contact person Owner:
-wa.me/6281368971807 (Owner)`
+
+
+Chat Owner Untuk Order :
+wa.me/6285664770042 (Owner)`
 let message = await prepareWAMessageMedia({ image: {url: 'https://i.postimg.cc/KYL0g2K7/bank.jpg' }}, { upload: conn.waUploadToServer })
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
@@ -28,7 +33,7 @@ let message = await prepareWAMessageMedia({ image: {url: 'https://i.postimg.cc/K
            hydratedButtons: [
               {
              quickReplyButton: {
-               displayText: '🧒 Owner',
+               displayText: 'Owner',
                id: '.owner',
              }
 
