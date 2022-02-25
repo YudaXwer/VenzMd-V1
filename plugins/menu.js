@@ -28,7 +28,7 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-━━━⬣ *INFO BOT*
+━━━⬣ *%me*
 ❏ Version: %version
 ❏ Library: Baileys-MD
 ❏ Mode: ${global.opts['self'] ? 'Self' : 'publik'}
@@ -45,7 +45,8 @@ const defaultMenu = {
   header: '━━━⬣ %category',
   body: '🔖 %cmd %islimit %isPremium',
   footer: '\n',
-  after: ``,
+  after: `
+  `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
@@ -156,21 +157,24 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            hydratedFooterText: wm,
            hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Group',
-                                    url: 'https://chat.whatsapp.com/FmhTMtBbANVEprMNlJPTov'
-                                }
-                            },
+               displayText: 'Group',
+               url: 'https://chat.whatsapp.com/FmhTMtBbANVEprMNlJPTov'
+             }
+
+           },
              {
              quickReplyButton: {
                displayText: 'OWNER',
                id: '.owner',
              }
+
            },
                {
              quickReplyButton: {
                displayText: 'SEWA',
                id: '.donasi',
              }
+
            },
            {
              quickReplyButton: {
@@ -179,6 +183,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
              }
            }]
          }
+       }
      }), { userJid: m.sender, quoted: m });
     //conn.reply(m.chat, text.trim(), m)
     return await conn.relayMessage(
