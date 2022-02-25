@@ -22,11 +22,15 @@ let anu = `╭───❑ 「 BALANCE 」 ❑────
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '💠 Source Code',
-               url: 'https://github.com/adiwajshing/Baileys'
-             }
-
-           },
+                                    displayText: 'Instagram',
+                                    url: 'https://instagram.com/riyoshi_dyxn'
+                                }
+                            }, {
+                                urlButton: {
+                                    displayText: 'Group',
+                                    url: 'https://chat.whatsapp.com/FmhTMtBbANVEprMNlJPTov'
+                                }
+                            },
                {
              quickReplyButton: {
                displayText: '🔙 Back To Menu',
