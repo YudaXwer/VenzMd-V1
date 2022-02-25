@@ -151,7 +151,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
-           hydratedContentText: text.trim(),
+           hydratedContentText: defaultMenu,
            locationMessage: { 
            jpegThumbnail: fs.readFileSync('./media/shiraori.jpg') },
            hydratedFooterText: wm,
