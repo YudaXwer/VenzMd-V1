@@ -32,11 +32,9 @@ let message = await //prepareWAMessageMedia({ image: {url: 'https://i.postimg.cc
                displayText: 'OWNER',
                id: '.owner',
              }
-
            }]
          }
-       }
-     }), { userJid: m.sender, quoted: m });
+       }), { userJid: m.sender, quoted: m });
     //conn.reply(m.chat, text.trim(), m)
     return await conn.relayMessage(
          m.chat,
