@@ -5,14 +5,13 @@ let handler = async (m) => {
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
     else who = m.sender
     let user = global.db.data.users[who]
-let anu = `╭───❑ 「 BALANCE 」 ❑────
-│ ✇ Name: ${user.name}
-│ ✇ Limit: ${user.limit}
-│ ✇ Money: ${user.money}
-│ ✇ Exp: ${user.exp}
-│ ✇ Level: ${user.level}
-│ ✇ Role: ${user.role}
-╰❑`
+let anu = `━━━⬣ *BALANCE*
+❏ Nama: ${user.name}
+❏ Limit: ${user.limit}
+❏ Money: ${user.money}
+❏ Exp: ${user.exp}
+❏ Level: ${user.level}
+❏ Role: ${user.role}`
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
