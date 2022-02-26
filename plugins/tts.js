@@ -1,4 +1,4 @@
-var gtts = require('node-gtts')('en')
+var gtts = require('node-gtts')('id')
 var path = require('path');
 const fs = require('fs')
 
