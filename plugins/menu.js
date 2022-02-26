@@ -153,7 +153,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            hydratedContentText: text.trim(),
            locationMessage: { 
            jpegThumbnail: fs.readFileSync('./media/shiraori.jpg') },
-           hydratedFooterText: `Don't Spam And Call\nThis Bot Is Unstable Please Be Patient\n%version`,
+           hydratedFooterText: `Don't Spam And Call\nThis Bot Is Unstable Please Be Patient\nV.1.6.3`,
            hydratedButtons: [{
                 urlButton: {
                                     displayText: 'Instagram',
