@@ -23,7 +23,8 @@ wa.me/6285664770042 (Owner)`
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
-           imageMessage: fs.readFileSync('./media/shiraori.jpg'),
+           locationMessage: { 
+           jpegThumbnail: fs.readFileSync('./media/shiraori.jpg') },
            hydratedContentText: duit,
            hydratedFooterText: wm,
            hydratedButtons: [
@@ -46,6 +47,6 @@ wa.me/6285664770042 (Owner)`
 
 handler.help = ['sewa']
 handler.tags = ['info']
-handler.command = /^sewa|bagiduit$/i
+handler.command = ['sewa','rental']
 
 module.exports = handler
