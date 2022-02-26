@@ -5,7 +5,7 @@
 
 const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, downloadContentFromMessage, downloadHistory, proto, getMessage, generateWAMessageContent, prepareWAMessageMedia } = require('@danielteodoro/baileys-md')
 let handler = async (m) => {
-duit = `*────── 「 SEWA 」 ──────*
+const duit = `*────── 「 SEWA 」 ──────*
  👋 Hai kak
 Ingin Sewa Bot ?
 ┌〔 LIST HARGA 〕
@@ -43,8 +43,8 @@ let message = await //prepareWAMessageMedia({ image: {url: 'https://i.postimg.cc
      )
 }
 
-handler.help = ['donasi']
+handler.help = ['sewa']
 handler.tags = ['info']
-handler.command = /^dona(te|si)|bagiduit$/i
+handler.command = /^sewa|bagiduit$/i
 
 module.exports = handler
