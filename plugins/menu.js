@@ -153,14 +153,18 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            hydratedContentText: text.trim(),
            locationMessage: { 
            jpegThumbnail: fs.readFileSync('./media/shiraori.jpg') },
-           hydratedFooterText: wm,
+           hydratedFooterText: "Don't Spam And Call\nThis Bot Is Unstable Please Be Patient\n%version",
            hydratedButtons: [{
+                urlButton: {
+                                    displayText: 'Instagram',
+                                    url: 'https://instagram.com/riyoshi_dyxn'
+                                }
+                            }, {
                                 urlButton: {
-               displayText: 'Group',
-               url: 'https://chat.whatsapp.com/FmhTMtBbANVEprMNlJPTov'
-             }
-
-           },
+                                    displayText: 'Group',
+                                    url: 'https://chat.whatsapp.com/FmhTMtBbANVEprMNlJPTov'
+                                }
+                            }, 
              {
              quickReplyButton: {
                displayText: 'OWNER',
