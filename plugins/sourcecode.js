@@ -7,7 +7,7 @@ const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessa
 let fs = require('fs')
 let handler = async (m) => {
 let esce = `
-Bot ini Menggunakan Script Dari
+Bot ini Menggunakan Library Dari
 
 https://github.com/adiwajshing/Baileys`
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -19,14 +19,14 @@ https://github.com/adiwajshing/Baileys`
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '💠 Source Code',
+               displayText: 'Library',
                url: 'https://github.com/adiwajshing/Baileys'
              }
 
            },
                {
              quickReplyButton: {
-               displayText: 'Ok Bang',
+               displayText: 'Back',
                id: '.menu',
              }
 
