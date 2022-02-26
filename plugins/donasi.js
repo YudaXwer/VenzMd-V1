@@ -4,8 +4,9 @@
 */
 
 const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, downloadContentFromMessage, downloadHistory, proto, getMessage, generateWAMessageContent, prepareWAMessageMedia } = require('@danielteodoro/baileys-md')
+let fs = require('fs')
 let handler = async (m) => {
-const duit = `*────── 「 SEWA 」 ──────*
+let duit = `*────── 「 SEWA 」 ──────*
  👋 Hai kak
 Ingin Sewa Bot ?
 ┌〔 LIST HARGA 〕
@@ -18,7 +19,7 @@ Ingin Sewa Bot ?
 
 Chat Owner Untuk Order :
 wa.me/6285664770042 (Owner)`
-let message = await //prepareWAMessageMedia({ image: {url: 'https://i.postimg.cc/KYL0g2K7/bank.jpg' }}, { upload: conn.waUploadToServer })
+//let message = await //prepareWAMessageMedia({ image: {url: 'https://i.postimg.cc/KYL0g2K7/bank.jpg' }}, { upload: conn.waUploadToServer })
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
