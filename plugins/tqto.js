@@ -23,7 +23,7 @@ let tqto = `
          hydratedTemplate: {
            hydratedContentText: tqto,
            locationMessage: { 
-           jpegThumbnail: fs.readFileSync('./media/tqto.jpg') }, 
+           jpegThumbnail: fs.readFileSync('./media/esce.jpg') }, 
            hydratedFooterText: wm,
            hydratedButtons: [{
                                 urlButton: {
