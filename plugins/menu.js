@@ -3,7 +3,7 @@ let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
 let tags = {
-  'main': '⚙️ GENERAL'
+  'main': '⚙️ GENERAL',
   'game': '🎮 GAME',
   'rpg': '⚔️ RPG',
   'xp': '👤 EXP & LIMIT',
@@ -24,7 +24,7 @@ let tags = {
   'tools': '🛠️ TOOLS',
   'advanced': '🔗 ADVANCED',
   'quotes': '📃 QUOTES',
-  'info': '⚠️ INFO',
+  'info': '⚠️ INFO'
 }
 const defaultMenu = {
   before: `
