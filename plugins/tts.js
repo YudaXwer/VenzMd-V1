@@ -11,7 +11,7 @@ let handler = async (m, {conn, text}) => {
 handler.command = ['tts']
 handler.help = ['tts']
 handler.tags = ['tools']
-
+handler.limit = true
 module.exports = handler
 function tts(text) {
     return new Promise((resolve, reject) => {
