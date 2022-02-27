@@ -3,6 +3,7 @@ let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
 let tags = {
+  'logo': '*🖼️ LOGO*',
   'main': '⚙️ GENERAL',
   'game': '🎮 GAME',
   'rpg': '⚔️ RPG',
