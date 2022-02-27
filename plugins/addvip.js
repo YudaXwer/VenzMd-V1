@@ -16,7 +16,7 @@ let handler = async (m, { conn, isOwner, text, isAdmin }) => {
   }
 
   try {
-    global.db.data.prems[m.sender]
+    global.db.data.prems[who]
     m.reply(`Berhasil ! ${await conn.user.name} sekarang premium`)
   } catch (e) {
     throw `nomor tidak ada didatabase!`
