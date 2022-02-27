@@ -50,7 +50,6 @@ global.loadDatabase = async function loadDatabase() {
   global.db.READ = false
   global.db.data = {
     users: {},
-    prems: {},
     chats: {},
     stats: {},
     msgs: {},
