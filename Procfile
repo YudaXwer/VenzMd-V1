@@ -1,1 +1,1 @@
-worker: node .
+worker: node . --db 'mongodb+srv://rbot:rio303@riodatabase.ghggd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
