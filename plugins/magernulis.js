@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 let handler = async(m, { conn, text }) => {
-    if (!teks) return conn.reply(m.chat, 'Uhm... Teksnya?', m)
+    if (!text) return conn.reply(m.chat, 'Uhm... Teksnya?', m)
   await m.reply('Sedang membuat...')
  let hasil = await (await fetch('.fetch http://hadi-api.herokuapp.com/api/canvas/nulis?text=${text}')).buffer()
  let caption = `*Nih kak:)*`
