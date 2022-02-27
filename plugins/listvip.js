@@ -1,4 +1,4 @@
-let fs = require('fs')
+/***let fs = require('fs')
 let handler = async (m, { conn, isOwner }) => {
   let pram = global.db.data.prems
   let prem = pram.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)
