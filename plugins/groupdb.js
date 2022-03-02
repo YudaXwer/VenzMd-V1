@@ -10,4 +10,4 @@ handler.tags = ['owner']
 handler.owner = true
 handler.command = /^(group(s|list))$/i
 
-export default handler
+module.exports = handler
