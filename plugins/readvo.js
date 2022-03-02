@@ -10,4 +10,4 @@ handler.help = ['readvo']
 handler.tags = ['tools']
 handler.command = /^readvo/i
 
-export default handler
+module.exports = handler
