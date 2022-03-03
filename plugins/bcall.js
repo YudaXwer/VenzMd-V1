@@ -8,12 +8,12 @@ let handler = async (m, { conn, text }) => {
   for (let id of chats) await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? '「 PESAN SIARAN 」\n' + teks : teks + '\n' + readMore + randomID(32)), true).catch(_ => _)
   m.reply('Broadcast Selesai:D')
 }
-handler.help = ['broadcast', 'bc'].map(v => v + ' <teks>')
+handler.help = ['broadcast', 'bc']
 handler.tags = ['owner']
 handler.command = /^(broadcast|bc)$/i
 handler.owner = true
-
 module.exports = handler
+
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 const randomID = length => randomBytes(Math.ceil(length * .5)).toString('hex').slice(0, length)
