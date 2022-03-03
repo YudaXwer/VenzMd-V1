@@ -15,6 +15,6 @@ handler.tags = ['owner']
 handler.owner = true
 handler.command = /^join$/i
 
-export default handler
+module.export = handler
 
 const isNumber = (x) => (x = parseInt(x), typeof x === 'number' && !isNaN(x))
