@@ -12,6 +12,6 @@ handler.command = /^(nekonsfw)$/i
 
 handler.limit = true
 handler.nsfw = true
-handler.owner = true
+handler.premium = true
 
 module.exports = handler
