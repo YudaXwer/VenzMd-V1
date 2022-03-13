@@ -29,7 +29,7 @@ let tags = {
 const defaultMenu = {
   before: `
 ━━━⬣ *INFO BOT*
-❏ Version: V.1.6.5
+❏ Version: V.1.6.7
 ❏ Library: Baileys-MD
 ❏ Mode: ${global.opts['self'] ? 'Self' : 'publik'}
 ❏ Runtime: %uptime
@@ -154,7 +154,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            hydratedContentText: text.trim(),
            locationMessage: { 
            jpegThumbnail: fs.readFileSync('./media/shiraori.jpg') },
-           hydratedFooterText: `Don't Spam And Call\nThis Bot Is Unstable Please Be Patient\nV.1.6.5`,
+           hydratedFooterText: `Don't Spam And Call\nThis Bot Is Unstable Please Be Patient\nV.1.6.7`,
            hydratedButtons: [{
                 urlButton: {
                                     displayText: 'Instagram',
