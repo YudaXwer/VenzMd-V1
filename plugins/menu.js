@@ -29,7 +29,7 @@ let tags = {
 const defaultMenu = {
   before: `
 ━━━⬣ *INFO BOT*
-❏ Version: %version
+❏ Version: V.1.6.5
 ❏ Library: Baileys-MD
 ❏ Mode: ${global.opts['self'] ? 'Self' : 'publik'}
 ❏ Runtime: %uptime
