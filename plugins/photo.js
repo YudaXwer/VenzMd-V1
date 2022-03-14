@@ -5,7 +5,7 @@ let [teks1, teks2] = text.split `|`
 
 let listeffect = `*Teks Satunya Harap Diisi !*`
     if (!teks1) return conn.reply(m.chat, listeffect, m)
-    if (!teks) return conn.reply(m.chat, 'Teksnya Mana kak ?', m)
+    if (!text) return conn.reply(m.chat, 'Teksnya Mana kak ?', m)
 
   await m.reply('Sedang membuat...')
  let hasil = await (await fetch('https://yx-api.herokuapp.com/api/canvas/gfx3' + '?text1=' + teks1 + '&text2=' + teks2)).buffer()
