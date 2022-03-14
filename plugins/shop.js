@@ -3,8 +3,8 @@ const potion = 520
 const Spotion = 150 
 const limit = 6000
 const Slimit = 3000
-const pancing = 25000
-const Spancing = 2500
+const pancing = 2500
+const Spancing = 750
 const Bdiamond = 900
 const Sdiamond = 750
 const Bcommon = 200
@@ -72,7 +72,7 @@ Sampah:     ${Ssampah}\n\n
                case 'pancing':
                             if (global.db.data.users[m.sender].money >= pancing * count) {
                                 global.db.data.users[m.sender].money -= pancing * count
-                                global.db.data.users[m.sender].fishingrod += count * 1
+                                global.db.data.users[m.sender].fishingroddurability += count * 1
                                 conn.reply(m.chat, `Succes membeli ${count} Pancing dengan harga ${pancing * count} money\n\nGunakan Fishing Rod Untuk Memancing dengan ketik: *${usedPrefix}fish*`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Pancing dengan harga ${pancing * count} money`,)
                         break
