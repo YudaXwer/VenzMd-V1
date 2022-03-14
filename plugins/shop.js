@@ -69,9 +69,9 @@ Sampah:     ${Ssampah}\n\n
                                 conn.reply(m.chat, `Succes membeli ${count} Potion dengan harga ${potion * count} money\n\nGunakan potion dengan ketik: *${usedPrefix}use potion <jumlah>*`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Potion dengan harga ${potion * count} money`,)
                         break
-               case 'potion':
-                            if (global.db.data.users[m.sender].fishingrod >= fishrod * count) {
-                                global.db.data.users[m.sender].money -= fishrod * count
+               case 'pancing':
+                            if (global.db.data.users[m.sender].money >= pancing * count) {
+                                global.db.data.users[m.sender].money -= pancing * count
                                 global.db.data.users[m.sender].fishingrod += count * 1
                                 conn.reply(m.chat, `Succes membeli ${count} Pancing dengan harga ${pancing * count} money\n\nGunakan Fishing Rod Untuk Memancing dengan ketik: *${usedPrefix}fish*`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Pancing dengan harga ${pancing * count} money`,)
