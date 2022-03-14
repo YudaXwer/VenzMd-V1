@@ -1,84 +1,24 @@
 let fetch = require('node-fetch')
 
 let handler = async(m, { conn, text }) => {
-let [effect, teks] = text.split `|`
+let [teks1, teks2] = text.split `|`
 
-let listeffect = `
-*List Effect Photooxy :*
-
-smoke
-wolfmetal
-underwaterocean
-typography
-neonlight
-google
-rainbowshine
-camuflage
-3dglowing
-vintage
-candy
-gradientavatar
-glowrainbow
-stars
-fur
-flaming
-crispchrome
-kueultah
-rainbowbg
-metalicglow
-striking3d
-watermelon
-underwebmatrix
-multimaterial
-harrypotter
-8bit
-kopi2
-luxuryroyal
-gerbang
-woodblock
-smoketypography
-sweetcandy
-silk
-bevel
-partyneon
-greenleaves
-modernmetal
-lolcover
-warface
-pentakill
-aov
-battlefield
-avatarlol
-pokemon
-lolavatarglitch
-shinebannerlol
-mastery7lol
-dota2avatar
-lol
-crossfire
-glowpentakill
-warfacecover
-coveroverwatch
-lolcover2
-csgo
-lolpentakill
-`.trim()
-
-    if (!effect) return conn.reply(m.chat, listeffect, m)
-    if (!teks) return conn.reply(m.chat, 'Uhm... Teksnya?', m)
+let listeffect = `*Teks Satunya Harap Diisi !*`
+    if (!teks1) return conn.reply(m.chat, listeffect, m)
+    if (!teks) return conn.reply(m.chat, 'Teksnya Mana kak ?', m)
 
   await m.reply('Sedang membuat...')
- let hasil = await (await fetch('https://api.xteam.xyz/photooxy/' + effect + '?text=' + teks + '&APIKEY=uhdahlah')).buffer()
- let caption = `*PHOTOOXY*\n\nEffect : ${effect}`
+ let hasil = await (await fetch('https://yx-api.herokuapp.com/api/canvas/gfx3' + '?text1=' + teks1 + '&text2=' + teks2)).buffer()
+ let caption = `*Nih Kak, Satu Logo 1k:v`
 
-    conn.sendFile(m.chat, hasil, 'photooxy.jpg', caption, m)
+    conn.sendFile(m.chat, hasil, 'logo4.jpg', caption, m)
 }
-handler.help = ['photooxy <effect|teks>']
-handler.tags = ['maker']
-handler.command = /^(photooxy)$/i
+handler.help = ['logo4 <teks1|teks2>']
+handler.tags = ['logo']
+handler.command = /^(logo4)$/i
 handler.owner = false
 handler.mods = false
-handler.premium = false
+handler.premium = true
 handler.group = false
 handler.private = false
 
