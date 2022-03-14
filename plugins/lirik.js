@@ -2,11 +2,11 @@ import { lyrics, lyricsv2 } from '@bochilteam/scraper'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : ''
-    if (!teks) throw `Use example ${usedPrefix}${command} hallo`
+    if (!text) throw `Contoh Penggunaan ${usedPrefix}${command} andmesh hanya rindu`
     const result = await lyricsv2(teks).catch(async _ => await lyrics(teks))
     m.reply(`
-Lyrics *${result.title}*
-Author ${result.author}
+lirik : *${result.title}*
+Author : *${result.author}*
 
 
 ${result.lyrics}
