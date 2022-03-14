@@ -1,8 +1,10 @@
 let { MessageType } = require('@danielteodoro/baileys-md')
 const potion = 520
 const Spotion = 150 
-const limit = 350
-const Slimit = 100
+const limit = 6000
+const Slimit = 3000
+const fishrod = 5000
+cosnt Sfishrod = 2500
 const Bdiamond = 900
 const Sdiamond = 750
 const Bcommon = 200
@@ -31,7 +33,8 @@ Contoh penggunaan: *${usedPrefix}shop buy potion 1*\n\n
 List Barang:\n\n
 *Barang   |  Harga beli*\n
 Potion:       ${potion}
-Limit:.        ${limit}
+Limit:        ${limit}
+Fishing Rod:  ${fishrod}
 Diamond:     ${Bdiamond}
 Common:     ${Bcommon}
 Uncommon:  ${Buncommon}
@@ -43,6 +46,7 @@ Sword:       ${sword}\n\n
 *Barang   | Harga Jual*\n
 Potion:       ${Spotion}
 Limit:          ${Slimit}
+Fishing Rod:   ${Sfishrod}
 Diamond:     ${Sdiamond}
 Common:     ${Scommon}
 Uncommon:  ${Suncommon}
@@ -64,6 +68,13 @@ Sampah:     ${Ssampah}\n\n
                                 global.db.data.users[m.sender].potion += count * 1
                                 conn.reply(m.chat, `Succes membeli ${count} Potion dengan harga ${potion * count} money\n\nGunakan potion dengan ketik: *${usedPrefix}use potion <jumlah>*`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Potion dengan harga ${potion * count} money`,)
+                        break
+               case 'potion':
+                            if (global.db.data.users[m.sender].fishingrod >= fishrod * count) {
+                                global.db.data.users[m.sender].money -= fishrod * count
+                                global.db.data.users[m.sender].fishrod += count * 1
+                                conn.reply(m.chat, `Succes membeli ${count} Fishing Rod dengan harga ${potion * count} money\n\nGunakan Fishing Rod Untuk Memancing dengan ketik: *${usedPrefix}fish*`, m)
+                            } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Fishing Rod dengan harga ${fishrod * count} money`,)
                         break
                     case 'limit':
                              if (global.db.data.users[m.sender].exp >= limit * count) {
