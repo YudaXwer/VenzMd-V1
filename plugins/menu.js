@@ -153,7 +153,8 @@ let message = await prepareWAMessageMedia({ video: fs.readFileSync('./p.mp4'), g
      templateMessage: {
          hydratedTemplate: {
            hydratedContentText: text.trim(),
-           imageMessage: fs.readFileSync('./media/shiraori.jpg')
+         locationMessage: { 
+           jpegThumbnail: fs.readFileSync('./media/shiraori.jpg') },
            hydratedFooterText: `Don't Spam And Call\nThis Bot Is Unstable Please Be Patient\nV.1.6.7`,
            hydratedButtons: [{
                 urlButton: {
