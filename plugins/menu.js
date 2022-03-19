@@ -148,13 +148,14 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
+let message = await prepareWAMessageMedia({ video: fs.readFileSync('./p.mp4'), gifPlayback: true }, { upload: rio.waUploadToServer })
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
            hydratedContentText: text.trim(),
-           locationMessage: { 
-           jpegThumbnail: fs.readFileSync('./media/shiraori.jpg') },
+           videoMessage: ${message},
            hydratedFooterText: `Don't Spam And Call\nThis Bot Is Unstable Please Be Patient\nV.1.6.7`,
+           gifPlayback: true,
            hydratedButtons: [{
                 urlButton: {
                                     displayText: 'Instagram',
