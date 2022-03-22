@@ -1,21 +1,15 @@
+ var gtts = require('node-gtts')('id')
 var path = require('path');
 const fs = require('fs')
 
 let handler = async (m, {conn, text}) => {
-  let [teks1, teks2] = text.split `|`
- var gtts = require('node-gtts')(teks1)
-  let textinv = `*Kode Bahasa Harap Diisi !*`
-  let teksinv = `*Teks Pesan Harap Diisi !*`
-    if (!teks1) return conn.reply(m.chat, textinv, m)
-    if (!teks2) return conn.reply(m.chat, teksinv, m)
-    if (!text) return conn.reply(m.chat, 'Teksnya Mana kak ?', m)
-    api = await tts(teks2)
+    api = await tts(text)
     conn.sendFile(m.chat, api, '', wm, m, true)
 }
 
 
 handler.command = ['tts']
-handler.help = ['tts lang|mess']
+handler.help = ['tts']
 handler.tags = ['tools']
 handler.limit = true
 
