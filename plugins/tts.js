@@ -1,11 +1,11 @@
-var gtts = require('node-gtts')(teks1)
 var path = require('path');
 const fs = require('fs')
 
 let handler = async (m, {conn, text}) => {
   let [teks1, teks2] = text.split `|`
+ var gtts = require('node-gtts')(teks1)
   let textinv = `*Kode Bahasa Harap Diisi !*`
-let teksinv = `*Teks Pesan Harap Diisi !*`
+  let teksinv = `*Teks Pesan Harap Diisi !*`
     if (!teks1) return conn.reply(m.chat, textinv, m)
     if (!teks2) return conn.reply(m.chat, teksinv, m)
     if (!text) return conn.reply(m.chat, 'Teksnya Mana kak ?', m)
