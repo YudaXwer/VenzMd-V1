@@ -63,4 +63,4 @@ handler.command = handler.help = [
 ]
 handler.tags = ['anime']
 handler.limit = true
-module.export = handler
+module.exports = handler
