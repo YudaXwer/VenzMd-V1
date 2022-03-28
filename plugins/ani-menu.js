@@ -1,66 +1,14 @@
-let handler = async (m, { conn, command }) => {
-  let api = `https://api-faza.herokuapp.com/api/wallpaper/${command}?apikey=FZDEVELOPER`
-  conn.sendButton(m.chat, '*~© R-BOT*', author, api, [['Next', `/${command}`]], m)  
+let handler = async (m, { conn, command, text }) => {
+  let api = `https://yx-api.herokuapp.com/api/textpro/${command}?text=${text}`
+  if (!text) return conn.reply(m.chat, '*Teksnya Mana Kak ?*', m)
+  conn.sendButton(m.chat, '*~© R-BOT*', author, api, [['Back', `/menu`]], m)  
 }
 
 handler.command = handler.help = [
-'cosplay',
-'shota',
-'yotsuba',
-'shinomiya',
-'yumeko',
-'tejina',
-'chiho',
-'boruto',
-'kaori',
-'shizuka',
-'kaga',
-'kotori',
-'mikasa',
-'akiyama',
-'gremory',
-'isuzu',
-'shina',
-'kagura',
-'shinka',
-'eba',
-'elaina',
-'yuri',
-'erza',
-'hinata',
-'minato',
-'naruto',
-'sagiri',
-'nezuko',
-'rize',
-'anna',
-'deidara',
-'yuki',
-'anna',
-'asuna',
-'ayuzawa',
-'chitoge',
-'emilia',
-'hestia',
-'inori',
-'itachi',
-'madara',
-'sakura',
-'sasuke',
-'tsunade',
-'onepiece',
-'mobil',
-'montor',
-'bonekachucky',
-'keneki',
-'megumin',
-'toukachan',
-'akira',
-'itori',
-'kurumi',
-'miku',
-'pokemon'
+'jokerlogo',
+'blackpink'
 ]
-handler.tags = ['anime']
+handler.tags = ['logo']
+handler.premium = true
 handler.limit = true
 module.exports = handler
